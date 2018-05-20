@@ -1,3 +1,5 @@
+NOTE: This repositiory is a personal derivative of the original work.  
+-> https://github.com/Roommetro/Friendly.WPFStandardControls
 Friendly.WPFStandardControls
 ============================
 
