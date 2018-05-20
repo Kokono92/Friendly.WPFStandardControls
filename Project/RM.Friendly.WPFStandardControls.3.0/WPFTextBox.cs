@@ -84,5 +84,62 @@ namespace RM.Friendly.WPFStandardControls
             textBox.Focus();
             textBox.Text = value;
         }
+
+#if ENG
+        /// <summary>
+        /// Returns the control's caretIndex.
+        /// </summary>
+#else
+        /// <summary>
+        /// キャレット位置を取得します。
+        /// </summary>
+#endif
+        public int CaretIndex
+        {
+            get { return Getter<int>("CaretIndex"); }
+        }
+
+#if ENG
+        /// <summary>
+        /// Sets the control's caretIndex.
+        /// </summary>
+        /// <param name="caretIndex">CaretIndex to use.</param>
+#else
+        /// <summary>
+        /// キャレット位置を変更します。
+        /// </summary>
+        /// <param name="caretIndex">キャレット位置。</param>
+#endif
+        public void EmulateChangeCaretIndex(int caretIndex)
+        {
+            InvokeStatic(EmulateChangeCaretIndex, caretIndex);
+        }
+
+#if ENG
+        /// <summary>
+        /// Sets the control's caretIndex.
+        /// Executes asynchronously. 
+        /// </summary>
+        /// <param name="caretIndex">CaretIndex to use.</param>
+        /// <param name="async">Asynchronous execution.</param>
+#else
+        /// <summary>
+        /// キャレット位置を変更します。
+        /// 非同期で実行します。
+        /// </summary>
+        /// <param name="caretIndex">キャレット位置。</param>
+        /// <param name="async">非同期実行オブジェクト。</param>
+#endif
+        public void EmulateChangeCaretIndex(int caretIndex, Async async)
+        {
+            InvokeStatic(EmulateChangeCaretIndex, async, caretIndex);
+        }
+        
+        private static void EmulateChangeCaretIndex(TextBox textBox, int value)
+        {
+            textBox.Focus();
+            textBox.CaretIndex = value;
+        }
+
     }
 }
