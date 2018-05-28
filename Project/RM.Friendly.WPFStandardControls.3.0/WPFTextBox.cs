@@ -1,4 +1,6 @@
-﻿using Codeer.Friendly;
+﻿//  Edited by Kokono92, 5/20/2018
+//  - Added access methods to CarretIndex property of TextBox
+using Codeer.Friendly;
 using Codeer.Friendly.Windows;
 using System.Windows.Controls;
 
